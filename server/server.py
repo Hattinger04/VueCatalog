@@ -1,3 +1,5 @@
+import datetime
+
 from flask import Flask, request,jsonify
 from sqlalchemy import Column, Integer, Text, Float, DateTime, create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
@@ -66,6 +68,50 @@ class CatalogREST(Resource):
         return  jsonify(infos)
 
 api.add_resource(CatalogREST, '/cat-item/<int:id>')
+
+@dataclass #Diese ermoeglicht das Schreiben als JSON mit jsonify
+class History(Base):
+    __tablename__ = 'history'  # Abbildung auf diese Tabelle
+    id: int
+    datum: datetime.datetime
+    description: str
+
+    id = Column(Integer, primary_key=True)
+    datum = Column(DateTime)
+    description = Column(Text)
+
+
+class HistoryREST(Resource):
+    def get(self, id):
+        info = History.query.get(id)
+        return jsonify(info)
+    def put(self, id):
+        data = request.get_json(force=True)['info']
+        print(data)
+        info = History(id=data['id'], description=data['datum'], thumb=data['description'])
+        db_session.add(info)
+        db_session.flush()
+        return jsonify(info)
+    def delete(self,id):
+        info = History.query.get(id)
+        if info is None:
+            return jsonify({'message': 'object with id %d does not exist' % id})
+        db_session.delete(info)
+        db_session.flush()
+        return jsonify({'message': '%d deleted' % id})
+    def patch(self, id):
+        print(request.json)
+        info = History.query.get(id)
+        if info is None:
+            return jsonify({'message': 'object with id %d does not exist' % id})
+        description = request.json['params']['description']
+        info.description = description
+        db_session.add(info)
+        db_session.flush()
+        return jsonify({'message': 'object with id %d modified' % id})
+
+api.add_resource(HistoryREST, '/history-item/<int:id>')
+
 
 @app.teardown_appcontext
 def shutdown_session(exception=None):
