@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b405963f-135f-4095-9c67-3c355bd6db51" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/client/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/client/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/client/src/requests.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/client/src/requests.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +99,10 @@
       <option name="presentableId" value="Default" />
       <updated>1670591084716</updated>
       <workItem from="1670591086121" duration="980000" />
-      <workItem from="1672325025777" duration="7043000" />
+      <workItem from="1672325025777" duration="9855000" />
+      <workItem from="1672393542692" duration="717000" />
+      <workItem from="1672415246711" duration="1747000" />
+      <workItem from="1672419740262" duration="4981000" />
     </task>
     <servers />
   </component>
@@ -115,6 +117,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Aufgabe_4$Flask.coverage" NAME="Flask Coverage Results" MODIFIED="1670591175166" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/server" />
-    <SUITE FILE_PATH="coverage/Aufgabe_4$server.coverage" NAME="server Coverage Results" MODIFIED="1672325611088" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/server" />
+    <SUITE FILE_PATH="coverage/Aufgabe_4$server.coverage" NAME="server Coverage Results" MODIFIED="1672428317088" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/server" />
   </component>
 </project>
